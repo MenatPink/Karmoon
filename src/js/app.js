@@ -1,4 +1,1 @@
-const myName = 'Menats';
-const hello = () => {
-    return `hello ${myName}`;
-};
+// Menu Nav Open Event

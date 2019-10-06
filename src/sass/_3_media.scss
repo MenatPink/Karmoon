@@ -1,0 +1,133 @@
+@media only screen and(max-width:1460px) {
+    footer {
+        .footer-image {
+            display: none;
+        }
+
+        .footer-links-1 {
+            margin-left: 180px;
+        }
+    }
+}
+
+@media only screen and (max-width:1200px) {
+    .hero-container {
+        .hero {
+            nav {
+                ul {
+                    width: 100%;
+
+                    li {
+                        display: none;
+                    }
+
+                    img {
+                        display: block;
+                        position: absolute;
+                        left: 25px;
+                        top: 5px;
+                    }
+                }
+
+                p {
+                    margin: 0;
+                    position: absolute;
+                    top: 41px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+                .nav-icons {
+                    position: absolute;
+                    left: 100%;
+                    transform: translateX(-150%);
+                }
+            }
+        }
+    }
+
+    footer {
+        position: relative;
+        height: 1000px;
+
+        .footer-title {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0;
+            top: 40px;
+        }
+
+        .footer-links {
+            display: block;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0;
+        }
+
+        .footer-links-1 {
+            top: 40px;
+        }
+
+        .footer-links-2 {
+            top: 520px;
+            margin-left: -60px;
+        }
+
+        .footer-links-3 {
+            top: 670px;
+            margin-left: -60px;
+        }
+    }
+}
+
+@media only screen and (max-width:985px) {
+    .products-container {
+        flex-direction: column;
+
+        .product-banner {
+            width: 100%;
+
+            p {
+                &:nth-of-type(1) {
+                    bottom: 50%;
+                    font-size: 50px;
+                }
+
+                &:nth-of-type(2) {
+                    bottom: calc(50% - 80px);
+                    font-size: 25px;
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .hero-container {
+        .hero {
+            .hero-title {
+                h1 {
+                    font-size: 30px;
+                }
+
+                button {
+                    &:nth-of-type(1) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .about-container {
+        .about-text {
+            font-size: 45px;
+            padding: 20px;
+        }
+    }
+}
