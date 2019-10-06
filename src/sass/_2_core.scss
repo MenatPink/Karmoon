@@ -32,7 +32,7 @@
         width: 100%;
 
         background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0) 20%),
-            url('../../build/images/Slider-hero.png');
+            url('../../build/images/SUB_7436-hayley.png');
         background-repeat: no-repeat;
         background-size: cover;
 
@@ -80,6 +80,49 @@
                 float: right;
                 margin-top: 41px;
                 margin-right: 180px;
+            }
+        }
+
+        .hero-title {
+            width: 565px;
+            margin-top: 200px;
+            margin-left: 83px;
+
+            h1 {
+                color: white;
+                font-size: 54px;
+                font-family: $poppins;
+                font-family: 800;
+            }
+
+            p {
+                color: white;
+                font-family: $open-sans;
+                font-size: 14px;
+            }
+
+            button {
+                text-transform: uppercase;
+                font-weight: bold;
+                color: white;
+                font-size: 14px;
+                height: 46px;
+                font-family: $poppins;
+                margin-top: 25px;
+
+                &:nth-of-type(1) {
+                    border: 3px solid white;
+                    background: transparent;
+                    width: 170px;
+                    margin-right: 20px;
+                }
+
+                &:nth-of-type(2) {
+                    background-color: black;
+                    color: white;
+                    width: 124px;
+                    border: none;
+                }
             }
         }
     }
