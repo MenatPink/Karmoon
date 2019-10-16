@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700,800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="build/styles/main.css">
     <title>Karmoon</title>
 </head>
@@ -23,6 +24,14 @@
         </div>
         <div class="hero">
             <div class="full-screen-navigation nav-close">
+                <input class="searchbar" type="search" placeholder="Search..." />
+                <div class="collection-container">
+                    <div class="collection-menu-item">collection name</div>
+                    <div class="collection-menu-item">collection name</div>
+                    <div class="collection-menu-item">collection Name</div>
+                    <div class="collection-menu-item">collection Name</div>
+                    <div class="collection-menu-item">collection name</div>
+                </div>
                 <ul>
                     <li>Delivery Info</li>
                     <li>Retail</li>
@@ -58,33 +67,42 @@
         </div>
     </section>
     <section class="products-container">
-        <div class="product-banner">
+        <div class="product-banner product-banner-1">
             <p>product title</p>
             <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse</p>
-            <img src="build/images/Plane-2.png" alt="Man Showing Earphones">
         </div>
-        <div class="product-banner">
+        <div class="product-banner product-banner-2">
             <p>product title</p>
             <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse</p>
-            <img src="build/images/Group Copy 3.png" alt="">
         </div>
-        <div class="product-banner">
+        <div class="product-banner product-banner-3">
             <p>product title</p>
             <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse</p>
-            <img src="build/images/Group Copy 4.png" alt="">
         </div>
     </section>
     <section class="about-container">
-        <p class="about-text">Lorem ipsum dolor sit amet,<br /> consectetur adipiscing elit. Suspen <br /> disse
-            tincidunt erat ut tuiems
-        </p>
-        <p>Ricky Grimes</p>
+        <div class="carousel-container">
+            <div class="slide-1">
+                <p class="about-text">Lorem ipsum dolor sit amet,<br /> consectetur adipiscing elit. Suspen <br /> disse
+                    tincidunt erat ut tuiems
+                </p>
+            </div>
+            <div class="slide-2">
+                <p class="about-text">Text on slide 2</p>
+            </div>
+            <div class="slide-3">
+                <p class="about-text">Text on slide 3</p>
+            </div>
+        </div>
+        <p class="about-name">Ricky Grimes</p>
         <p id="about-subtitle">Title - Company Name</p>
     </section>
     <footer>
-        <p class="footer-title">karmoon</p>
         <img class="footer-image" src="build/images/Bitmap.png" alt="Musician holding Earphones">
-        <div>
+        <div class="footer-title">
+            <p>karmoon</p>
+        </div>
+        <div class="footer-content">
 
 
             <div class="footer-links footer-links-1">
@@ -100,8 +118,6 @@
                     <li>privacy and cookie policy</li>
                     <li>UGC terms of use</li>
                 </ul>
-                <img class="footer-payment-methods" src="build/images/payment-methods.png" alt="Payment Methods">
-                <p id="copyright">© 2019 Company Name</p>
             </div>
             <div class="footer-links footer-links-2">
                 <ul>
@@ -113,15 +129,29 @@
             </div>
             <div class="footer-links footer-links-3">
                 <ul>
-                    <li class=" footer-header">policies</li>
-                    <li>Terms and conditions</li>
-                    <li>privacy and cookie policy</li>
-                    <li>UGC terms of use</li>
+                    <li class="footer-header">Social</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur <br />adipiscing elit. Suspendisse tincidunt erat ut
+                    </li>
+                    <div class="email-submit">
+                        <input type="email" placeholder="Email Address"><button>sign up</button>
+                    </div>
+                    <div class="social-media-container">
+                        <img src="build/images/Group 1.png" alt="">
+                        <img src="build/images/icon-Facebook.png" alt="">
+                        <img src="build/images/icon-Twitter.png" alt="">
+                        <img src="build/images/XMLID_823_.png " alt="">
+                    </div>
                 </ul>
             </div>
         </div>
+        <div class="footer-extras">
+            <img class="footer-payment-methods" src="build/images/payment-methods.png" alt="Payment Methods">
+            <p id="copyright">© 2019 Company Name</p>
+        </div>
     </footer>
-    <script src="build/app/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="build/app/uglify.js"></script>
 </body>
 
 </html>

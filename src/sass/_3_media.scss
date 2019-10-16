@@ -1,11 +1,28 @@
-@media only screen and(max-width:1460px) {
+@media only screen and(max-width:1245px) {
     footer {
-        .footer-image {
-            display: none;
+        .footer-title {
+            p {
+                margin: 0;
+                width: 100%;
+                text-align: center;
+                margin-top: 40px;
+                font-size: 1.2rem;
+            }
         }
 
-        .footer-links-1 {
-            margin-left: 180px;
+        .footer-content {
+            flex-direction: column;
+            align-items: left;
+            padding-left: 60px;
+        }
+
+        .footer-extras {
+            width: 100%;
+            margin: 0;
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
         }
     }
 }
@@ -47,37 +64,25 @@
     }
 
     footer {
-        position: relative;
-        height: 1000px;
+        min-height: 1000px;
+    }
+}
 
-        .footer-title {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            margin: 0;
-            top: 40px;
+@media only screen and(max-width:1070px) {
+    .about-container {
+        .about-text {
+            font-weight: lighter;
+            font-size: 2.25rem;
         }
 
-        .footer-links {
+        .slick-arrow {
+            font-weight: lighter;
             display: block;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            margin: 0;
         }
 
-        .footer-links-1 {
-            top: 40px;
-        }
-
-        .footer-links-2 {
-            top: 520px;
-            margin-left: -60px;
-        }
-
-        .footer-links-3 {
-            top: 670px;
-            margin-left: -60px;
+        #about-subtitle {
+            margin-top: 15px;
+            margin-bottom: 105px;
         }
     }
 }
@@ -91,14 +96,43 @@
 
             p {
                 &:nth-of-type(1) {
-                    bottom: 50%;
-                    font-size: 50px;
+                    font-size: 1.4rem;
+                    width: auto;
+                    white-space: nowrap;
                 }
 
                 &:nth-of-type(2) {
-                    bottom: calc(50% - 80px);
-                    font-size: 25px;
-                    width: 70%;
+                    font-size: 0.8rem;
+                    width: 95%;
+                    bottom: 85px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:945px) {
+    footer {
+        .footer-image {
+            display: none;
+        }
+
+        .footer-title {
+            width: 100%;
+
+            p {
+                font-size: 2rem;
+            }
+        }
+
+        .footer-content {
+            width: 100%;
+        }
+
+        .footer-links {
+            ul {
+                .footer-header {
+                    font-size: 1.2rem;
                 }
             }
         }
@@ -108,10 +142,21 @@
 @media only screen and (max-width:800px) {
     .hero-container {
         .hero {
-            .hero-title {
-                h1 {
-                    font-size: 30px;
+            position: relative;
+
+            .nav-icons {
+                img {
+                    &:nth-of-type(1) {
+                        display: none;
+                    }
                 }
+            }
+
+            .hero-title {
+                position: absolute;
+                bottom: 30px;
+                left: 10%;
+                margin: 0;
 
                 button {
                     &:nth-of-type(1) {
@@ -123,11 +168,71 @@
     }
 }
 
+@media only screen and (max-width:670px) {
+    .hero-container {
+        .hero {
+            .hero-title {
+                h1 {
+                    font-size: 6vw;
+                }
+
+                p {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:620px) {
+    .hero-container {
+        .new-release-container {
+            .new-release {
+                max-width: 80vw;
+            }
+        }
+    }
+}
+
 @media only screen and (max-width:600px) {
     .about-container {
         .about-text {
             font-size: 45px;
             padding: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width:580px) {
+    .products-container {
+        .product-banner {
+            p:nth-of-type(2) {
+                bottom: 65px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:520px) {
+    .hero-container {
+        .new-release-container {
+            p {
+                font-size: 3vw;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:410px) {
+    footer {
+        .email-submit {
+            input {
+                width: 45vw;
+            }
+
+            button {
+                width: 25vw;
+            }
         }
     }
 }

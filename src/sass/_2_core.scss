@@ -3,7 +3,7 @@
 .hero-container {
     .new-release-container {
         width: 100%;
-        height: 30px;
+        min-height: 30px;
         background-color: #000;
 
         .new-release {
@@ -35,20 +35,32 @@
             url('../../build/images/SUB_7436-hayley.png');
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: top right;
 
         .full-screen-navigation {
             position: absolute;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 0));
             width: 100%;
-            height: 100vh;
+            height: 200vh;
             z-index: 1000;
             top: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             overflow: hidden;
             transition: all ease-in-out 0.5s;
+
+            .searchbar {
+                background: transparent;
+                border: solid 3px #fff;
+                width: 70%;
+                height: 50px;
+                color: #fff;
+                padding: 10px;
+                margin-top: 110px;
+                font-family: $open-sans;
+            }
 
             ul {
                 max-width: 531px;
@@ -70,9 +82,33 @@
             }
         }
 
+        .collection-container {
+            margin-top: 10px;
+            width: 70%;
+
+            .collection-menu-item {
+                padding-top: 14px;
+                width: 100%;
+                height: 60px;
+                text-align: center;
+                vertical-align: middle;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+                font-size: 21px;
+                font-family: $poppins;
+                font-weight: 800;
+                color: white;
+                background-image: url('../../build/images/Group\ Copy\ 3.png');
+                background-size: cover;
+                background-position: center;
+                cursor: pointer;
+            }
+        }
+
         nav {
             width: 100%;
             position: relative;
+            z-index: 1000;
 
             p {
                 text-transform: uppercase;
@@ -137,6 +173,10 @@
                 float: right;
                 margin-top: 41px;
                 margin-right: 180px;
+
+                img {
+                    cursor: pointer;
+                }
             }
         }
 
@@ -194,6 +234,9 @@
         width: 33.3%;
         overflow: hidden;
         max-height: 690px;
+        height: 590px;
+        background-repeat: no-repeat;
+        background-size: cover;
 
         img {
             object-fit: cover;
@@ -211,7 +254,7 @@
                 font-family: $poppins;
                 font-size: 21px;
                 font-weight: 800;
-                bottom: 32%;
+                bottom: 105px;
                 text-align: center;
             }
 
@@ -219,14 +262,32 @@
                 font-family: $open-sans;
                 font-size: 15px;
                 text-align: center;
-                bottom: 20%;
+                bottom: 47px;
                 width: 85%;
             }
         }
     }
+
+    .product-banner-1 {
+        background-image: url("../../build/images/Plane-2.png");
+        background-position: top center;
+    }
+
+    .product-banner-2 {
+        background-image: url("../../build/images/Group\ Copy\ 3.png");
+        background-position: top center;
+    }
+
+    .product-banner-3 {
+        background-image: url("../../build/images/Group\ Copy\ 4.png");
+    }
 }
 
 .about-container {
+    .about-text {
+        margin: 100px;
+    }
+
     p {
         font-family: $poppins;
         text-align: center;
@@ -243,11 +304,45 @@
         }
     }
 
+    .slick-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
     .about-text {
         font-size: 58px;
-        margin-top: 100px;
         font-weight: 800;
 
+    }
+
+    .about-name {
+        position: relative;
+    }
+
+    .slick-arrow {
+        position: absolute;
+        background: transparent;
+        border: none;
+        top: -8px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        font-family: $poppins;
+        display: none;
+        vertical-align: top;
+    }
+
+    .slick-prev {
+        left: 20px;
+    }
+
+    .slick-next {
+        right: 20px;
+    }
+
+    #about-subtitle {
+        margin-bottom: 135px;
     }
 }
 
@@ -257,28 +352,60 @@ footer {
     min-height: 742px;
     position: relative;
 
-    .footer-image {
-        position: absolute;
-        bottom: 25px;
-        left: 0px;
+    .footer-title {
+        display: inline-flex;
+        width: calc(100vw - 500px);
+        height: 100px;
+        vertical-align: top;
+
+        p {
+            font-family: $lato;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: white;
+            margin-top: 94px;
+            margin-left: 40px;
+        }
     }
 
-    .footer-title {
-        font-family: $lato;
-        font-size: 20px;
-        text-transform: uppercase;
-        color: white;
-        margin-left: 485px;
-        margin-top: 94px;
-        text-align: center;
-        width: 108px;
-        display: inline-flex;
+    .footer-image {
+        display: inline-block;
+        transform: translateY(-30px);
+        float: left;
     }
+
+    .footer-extras {
+        margin-left: 70px;
+        display: inline-block;
+
+        #copyright {
+            font-family: $open-sans;
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.3);
+            text-transform: uppercase;
+            opacity: 30%;
+        }
+
+    }
+
+    .footer-payment-methods {
+        margin-top: 50px;
+        mix-blend-mode: lighten;
+    }
+
+    .footer-content {
+        display: inline-flex;
+        width: calc(100vw - 500px);
+        justify-content: space-around;
+        align-items: top;
+        vertical-align: top;
+        position: relative;
+        padding: 10px;
+    }
+
+
 
     .footer-links {
-        display: inline-block;
-        margin-top: 50px;
-        vertical-align: top;
 
         ul {
             li {
@@ -296,36 +423,66 @@ footer {
                 font-family: $poppins;
                 font-weight: 800;
                 font-size: 15px;
-                margin-bottom: 10px;
+                margin-bottom: 5px;
                 margin-top: 30px;
+                text-transform: uppercase;
             }
         }
 
-        .footer-payment-methods {
-            margin-top: 50px;
-        }
 
-        #copyright {
-            font-family: $open-sans;
-            font-size: 11px;
-            color: rgba(255, 255, 255, 0.3);
-            text-transform: uppercase;
-            margin-top: 70px;
-            opacity: 30%;
-        }
-    }
 
-    .footer-links-1 {
-        margin-left: 495px;
-    }
 
-    .footer-links-2 {
-        vertical-align: top;
-        margin-left: 25px;
     }
 
     .footer-links-3 {
         vertical-align: top;
-        margin-left: 180px;
+        font-size: 15px;
+
+        ul {
+            li {
+                text-transform: none;
+                line-height: 23px;
+            }
+        }
+    }
+
+    .email-submit {
+        margin-top: 23px;
+
+        input {
+            background-color: transparent;
+            border: solid 3px #fff;
+            height: 45px;
+            width: calc(333px - 132px);
+            color: rgba(255, 255, 255, 0.4);
+            padding-left: 13px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        button {
+            color: white;
+            background-color: transparent;
+            border: solid 3px #fff;
+            border-left: none;
+            height: 45px;
+            font-size: 14px;
+            width: 132px;
+            text-transform: uppercase;
+            font-family: $poppins;
+            font-weight: bold;
+            vertical-align: top;
+        }
+    }
+
+    .social-media-container {
+        width: 146px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+
+        img {
+            cursor: pointer;
+        }
     }
 }
